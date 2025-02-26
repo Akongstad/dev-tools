@@ -1,0 +1,75 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+      "": "project_symbols::Toggle",
+      //"cmd-t": "terminal_panel::ToggleFocus",
+      //"cmd-t": "workspace::ToggleBottomDock",
+      // "cmd-b": "workspace::ToggleLeftDock",
+      "cmd-t": "workspace::ToggleRightDock",
+      "cmd-b": "workspace::ToggleLeftDock",
+      //"cmd-b": "project_panel::ToggleFocus",
+      "cmd-1": ["workspace::ActivatePane", 0],
+      "cmd-shift-d": "diagnostics::Deploy",
+      "cmd-shift-9": "tab_switcher::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+      //
+      "cmd-shift-space": "editor::ShowEditPrediction",
+      "cmd-t": ["terminal_panel::ToggleFocus", "workspace::ToggleRightDock"],
+      //"cmd-t": "workspace::ToggleRightDock",
+
+      "cmd-b": ["project_panel::ToggleFocus", "workspace::ToggleLeftDock"],
+      "cmd-alt-l": "editor::Format",
+      "cmd-i": ["editor::Hover", "editor::ShowSignatureHelp"],
+      "cmd-shift-,": "tab_switcher::Toggle",
+      "cmd-/": ["editor::ToggleComments", { "advance_downwards": false }],
+      "cmd-alt-i": ["buffer_search::Deploy", { "selection_search_enabled": true }]
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-t": "workspace::ToggleRightDock",
+      "cmd-b": "project_panel::ToggleFocus"
+    }
+  },
+  {
+    "context": "ProjectPanel",
+    "bindings": {
+      "cmd-t": "terminal_panel::ToggleFocus",
+      "cmd-b": "workspace::ToggleLeftDock"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "cmd-1": ["pane::ActivateItem", 0],
+      "cmd-2": ["pane::ActivateItem", 1],
+      "cmd-3": ["pane::ActivateItem", 2],
+      "cmd-4": ["pane::ActivateItem", 3],
+      "cmd-5": ["pane::ActivateItem", 4],
+      "cmd-6": ["pane::ActivateItem", 5],
+      "cmd-7": ["pane::ActivateItem", 6],
+      "cmd-8": ["pane::ActivateItem", 7],
+      "cmd-9": ["pane::ActivateItem", 8],
+      "cmd-0": "pane::ActivateLastItem",
+      "ctrl--": "pane::GoBack",
+      "ctrl-shift-right": "pane::GoForward",
+      "cmd-shift-t": "pane::ReopenClosedItem",
+      "cmd-shift-f": "project_search::ToggleFocus"
+    }
+  }
+]
