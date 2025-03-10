@@ -23,6 +23,7 @@
     "env": {
       "EDITOR": "zed --wait"
     }
+    // "shell": { "program": "fish" }
   },
   "vim_mode": false,
   "base_keymap": "VSCode",
