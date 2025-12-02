@@ -53,3 +53,4 @@ keybind = alt+right=unbind
 
 keybind = global:alt+¨=toggle_quick_terminal
 keybind = ctrl+backspace=text:\x15
+keybind = super+c=text:\x03
