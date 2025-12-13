@@ -6,5 +6,7 @@ end
 
 alias idea='open -b com.jetbrains.intellij'
 
+
+
 starship init fish | source
 # EOF
