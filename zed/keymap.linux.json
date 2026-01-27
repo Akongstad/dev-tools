@@ -3,7 +3,7 @@
     "context": "Workspace",
     "bindings": {
       "": "project_symbols::Toggle",
-      "ctrl-t": "workspace::ToggleRightDock",
+      "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-b": "workspace::ToggleLeftDock",
       //"ctrl-b": "project_panel::ToggleFocus",
       "ctrl-1": ["workspace::ActivatePane", 0],
@@ -15,7 +15,7 @@
     "context": "Editor",
     "bindings": {
       "ctrl-shift-space": "editor::ShowEditPrediction",
-      "ctrl-t": ["terminal_panel::ToggleFocus", "workspace::ToggleRightDock"],
+      "ctrl-t": ["terminal_panel::ToggleFocus", "workspace::ToggleBottomDock"],
       "ctrl-b": ["project_panel::ToggleFocus", "workspace::ToggleLeftDock"],
       "ctrl-alt-l": "editor::Format",
       "ctrl-i": ["editor::Hover", "editor::ShowSignatureHelp"],
@@ -27,7 +27,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "ctrl-t": "workspace::ToggleRightDock",
+      "ctrl-t": "workspace::ToggleBottomDock",
       "ctrl-b": "project_panel::ToggleFocus"
     }
   },
@@ -58,14 +58,11 @@
     }
   },
 
-  //LINUX section:
-  // MARK/SELECT FROM CURSOR
   {
     "context": "Editor && !ExcludedFromTextEditing",
     "bindings": {
       "ctrl-right": "editor::MoveToEndOfLine",
       "ctrl-left": "editor::MoveToBeginningOfLine",
-      //Do the same but if shift. Highlight
       "ctrl-shift-left": "editor::SelectToBeginningOfLine",
       "ctrl-shift-right": "editor::SelectToEndOfLine",
       "ctrl-backspace": "editor::DeleteToBeginningOfLine",
@@ -78,8 +75,6 @@
       "alt-right": "editor::MoveToNextWordEnd",
       "alt-shift-right": "editor::SelectToNextWordEnd",
       "alt-backspace": "editor::DeleteToPreviousWordStart"
-
-      //Still missing some {}
     }
   }
 ]
