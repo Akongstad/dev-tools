@@ -10,7 +10,7 @@
     "context": "Workspace",
     "bindings": {
       "": "project_symbols::Toggle",
-      "cmd-t": "workspace::ToggleRightDock",
+      "cmd-t": "workspace::ToggleBottomDock",
       "cmd-b": "workspace::ToggleLeftDock",
       //"cmd-b": "project_panel::ToggleFocus",
       "cmd-1": ["workspace::ActivatePane", 0],
@@ -22,7 +22,7 @@
     "context": "Editor",
     "bindings": {
       "cmd-shift-space": "editor::ShowEditPrediction",
-      "cmd-t": ["terminal_panel::ToggleFocus", "workspace::ToggleRightDock"],
+      "cmd-t": ["terminal_panel::ToggleFocus", "workspace::ToggleBottomDock"],
       "cmd-b": ["project_panel::ToggleFocus", "workspace::ToggleLeftDock"],
       "cmd-alt-l": "editor::Format",
       "cmd-i": ["editor::Hover", "editor::ShowSignatureHelp"],
@@ -34,7 +34,7 @@
   {
     "context": "Terminal",
     "bindings": {
-      "cmd-t": "workspace::ToggleRightDock",
+      "cmd-t": "workspace::ToggleBottomDock",
       "cmd-b": "project_panel::ToggleFocus"
     }
   },
@@ -62,6 +62,12 @@
       "ctrl-shift-right": "pane::GoForward",
       "cmd-shift-t": "pane::ReopenClosedItem",
       "cmd-shift-f": "project_search::ToggleFocus"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-g": "git_panel::Toggle",
+      "cmd-b": "project_panel::Toggle"
     }
   }
 ]

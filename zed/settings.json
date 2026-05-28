@@ -7,23 +7,45 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "outline_panel": {
+    "dock": "left"
+  },
+  "collaboration_panel": {
+    "dock": "left"
+  },
+  "git_panel": {
+    "dock": "left"
+  },
+  "theme": "One Dark",
+  "ssh_connections": [
+    {
+      "host": "raspberrypi.local",
+      "username": "andreaskongstad",
+      "args": [],
+      "projects": [
+        {
+          "paths": ["/home/andreaskongstad"]
+        },
+        {
+          "paths": ["/home/andreaskongstad/developer/picam-streamer"]
+        },
+        {
+          "paths": ["/home/andreaskongstad/developer/searxng-docker"]
+        }
+      ]
+    }
+  ],
   "edit_predictions": {
+    "provider": "zed",
     "mode": "subtle"
   },
   "agent": {
-    "default_profile": "minimal",
-    "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
-    },
-    "version": "2"
-  },
-  "features": {
-    "edit_prediction_provider": "zed"
+    "dock": "right",
+    "default_profile": "ask"
   },
 
   "terminal": {
-    "dock": "right",
+    "dock": "bottom",
     "env": {
       "EDITOR": "zed --wait"
     },
@@ -37,9 +59,6 @@
   "buffer_font_size": 14.0,
   "show_edit_predictions": false,
   "autosave": "on_focus_change",
-  "show_line_numbers": true,
-  "show_gutter": true,
-  "show_indent_guides": true,
   "auto_signature_help": true,
   "extend_comment_on_newline": false,
   "git": {
@@ -88,10 +107,10 @@
       "language_servers": ["basedpyright", "!pyright", "ruff"],
       "formatter": [
         {
-          "code_actions": {
-            "source.organizeImports.ruff": true,
-            "source.fixAll.ruff": true
-          }
+          "code_action": "source.organizeImports.ruff"
+        },
+        {
+          "code_action": "source.fixAll.ruff"
         },
         {
           "language_server": {
