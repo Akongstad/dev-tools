@@ -12,7 +12,6 @@
       "": "project_symbols::Toggle",
       "cmd-t": "workspace::ToggleBottomDock",
       "cmd-b": "workspace::ToggleLeftDock",
-      //"cmd-b": "project_panel::ToggleFocus",
       "cmd-1": ["workspace::ActivatePane", 0],
       "cmd-shift-d": "diagnostics::Deploy",
       "cmd-shift-9": "tab_switcher::Toggle"
