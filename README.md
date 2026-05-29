@@ -1,2 +1,3 @@
-# dev-tools
-My development tools and configuration
+# dotfiles
+
+Development tools and configuration
